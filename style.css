@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Serif:wght@500&display=swap');
+
+:root{
+	--primary-color : #0c558a;
+	--text-color-title : #8db1cc ;
+	--text-font-article : 'Open Sans', sans-serif;
+	--text-font-title : 'Roboto Serif', sans-serif;
+}
+
+*{
+	box-sizing: content-box;
+	padding: 0;
+	margin: 0;
+}
+header{
+	background-color: var(--primary-color);
+	height: auto;
+	display: flex;
+	padding: 10px;
+	font-family: var(--text-font-title);
+}
+header .brand{
+	color : var(--text-color-title);
+	font-size: 1.7em;
+}
+nav{
+	margin-left: auto;
+	display: flex;
+	width: 60%;
+
+}
+nav a{
+	margin: 5px auto 0px auto;
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+
+}
+nav a:hover{
+	color:  var(--text-color-title);;
+}
+
+main div#home{
+	height: 30em;
+	display: flex;
+}
+main div#home div.description{
+	width: 30%;
+	text-align: justify;
+	padding: 50px;
+
+}
+main div#home div.description h2{
+	color: var(--text-color-title);
+	font-family: var(--text-font-title);
+}
+main div#home div.description article{
+	margin-top: 30px;
+	text-indent: 40px;
+	font-family: var(--text-font-article);
+}
+
+main div#home div#pictures{
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	position: relative;
+}
+main div#home div#pictures img{
+	width: 700px;
+	height: 300px;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 1px 1px 6px 0px gray;
+}
+main div#home div#pictures #changeLeft{
+	position: absolute;
+	bottom : 50%;
+	top : 40%;
+	left: 11%;
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	font-size: 3em;
+	color: var(--text-color-title);
+}
+
+
+main div#home div#pictures #changeRight{
+	position: absolute;
+	bottom : 50%;
+	top : 40%;
+	right: 11%;
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	font-size: 3em;
+	color: var(--text-color-title);
+}
+
+main div#home div#pictures #changeRight:hover,
+main div#home div#pictures #changeLeft:hover{
+	font-size: 4em;
+}
+
+main div#tipsAndTrick{
+	height: auto;
+	background-color: var(--primary-color);
+	box-shadow: 1px 1px 5px var(--primary-color);
+
+}
+
+main div#tipsAndTrick h3{
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+	font-family: var(--text-font-title);
+}
+main div#tipsAndTrick div.nav{
+	display: flex;
+	padding-top: 10px;
+	flex-wrap: wrap;
+	font-family: var(--text-font-article);
+}
+main div#tipsAndTrick div.nav div.item{
+	width: auto;
+	height: auto;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 1px 3px 5px var(--primary-color);
+}
+
+main div#tipsAndTrick div.nav div.item:hover{
+	background-color: var(--text-color-title);
+}
+
+main div#doctor{
+	height: 20em;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+main div#doctor .cards{
+	display: flex;
+	width: 100%;
+	overflow-x: scroll;
+
+}
+main div#doctor .cards .card{
+	min-width: 300px;
+	margin: 15px;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--primary-color);
+	border-radius: 4px;
+}
+main div#doctor .cards .card aside{
+	padding: 10px;
+	font-family: var(--text-font-article);
+}
+main div#doctor .cards .card aside div{
+	color :white;
+	font-size: 0.9em;
+}
+main div#doctor .cards .card button.btn{
+	background-color: white;
+	border: 4px 4px 4px 4px solid;
+	border-color: var(--primary-color);
+	font-family: var(--text-font-article);
+	font-weight: bold;
+}
+main div#doctor .cards .card img{
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	margin-top: 10px;
+	background-position: center;
+	border-radius: 100%;
+	box-shadow: 1px 1px 6px 0px white;
+}
+
+footer{
+	background-color: var(--primary-color);
+	height: auto;
+	display: flex;
+	font-family: var(--text-font-article);;
+}
+footer img{
+	margin-left: auto;
+	width: 150px;
+	border-radius: 50px;
+	padding: 10px;
+}
+footer aside{
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: auto;
+	color: white;
+}
+
+@media only screen and (max-width: 600px) {
+	/* Untuk Versi Mobile */
+	header .brand{
+		font-size: 1em;
+	}
+
+	nav a{
+		margin: 0px auto 0px auto;
+		color: white;
+		text-decoration: none;
+		font-size: 0.8em;
+	}
+
+	main div#home{
+		height: auto;
+		display: flex;
+		flex-direction: column-reverse;
+		font-size: 0.8em;
+	}
+	main div#home div.description{
+		width: auto;
+		text-align: justify;
+		padding: 30px;
+
+	}
+	
+	main div#home div#pictures{
+		width: 100%;
+	}
+	main div#home div#pictures img{
+		width: 100%;
+		height: 200px;
+	}
+
+	main div#tipsAndTrick h3{
+		font-size: 1em;
+	}
+	main div#tipsAndTrick div.nav div.item{
+		margin: 10px auto;
+		font-size: 0.8em;
+	}
+
+	main div#doctor .cards .card{
+		min-width: 200px;
+	
+	}
+	
+	footer img{
+		width: 100px;
+	}
+	footer aside{
+		font-size: 0.8em;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+header .brand{
+		font-size: 1em;
+	}
+
+	nav a{
+		margin: 0px auto 0px auto;
+		color: white;
+		text-decoration: none;
+		font-size: 0.8em;
+	}
+
+	main div#home{
+		height: auto;
+		display: flex;
+		flex-direction: column-reverse;
+		font-size: 0.8em;
+	}
+	main div#home div.description{
+		width: auto;
+		text-align: justify;
+		padding: 30px;
+
+	}
+	
+	main div#home div#pictures{
+		width: 100%;
+	}
+	main div#home div#pictures img{
+		width: 100%;
+		height: 200px;
+	}
+
+} 
